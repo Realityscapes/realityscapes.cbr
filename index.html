@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realityscapes CBR - Professional Softscaping & Garden Design Canberra</title>
+  <meta name="description" content="Transform your yard with professional softscaping services in Canberra. Turf installation, garden design, mulchwork & hedge planting. Fully insured with 5-star reviews. Book your free walkthrough today.">
+  <meta name="keywords" content="softscaping Canberra, garden makeover Canberra, turf installation Canberra, mulching Canberra, hedge planting Canberra, garden design Canberra">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WFFYZZZR3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7WFFYZZZR3');
+  </script>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emerald: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              300: '#6ee7b7',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  
+  <style>
+    .animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: .5;
+      }
+    }
+    
+    .transition-all {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+    
+    .duration-300 { transition-duration: 300ms; }
+    .duration-500 { transition-duration: 500ms; }
+    .duration-700 { transition-duration: 700ms; }
+    .ease-out { transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-400 { transition-delay: 400ms; }
+    .delay-600 { transition-delay: 600ms; }
+    .delay-800 { transition-delay: 800ms; }
+  </style>
+</head>
+<body class="min-h-screen bg-white overflow-x-hidden">
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 bg-green-500 shadow-sm py-4">
+    <div class="container mx-auto px-4 max-w-full">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-2 w-1/3">
+          <img 
+            src="realityscapes-logo-jpeg (1).jpg" 
+            alt="Realityscapes CBR Logo" 
+            id="header-logo"
+            class="w-auto transition-all duration-300 h-12 md:h-16" 
+          />
+          <span id="header-title" class="text-sm md:text-2xl font-bold transition-colors duration-300 text-white">Realityscapes CBR</span>
+        </div>
+        <div class="w-1/3"></div>
+        <div class="hidden md:flex items-center space-x-6">
+          <div id="header-phone" class="flex items-center space-x-2 text-sm transition-colors duration-300 text-white/90">
+            <i data-lucide="phone" class="h-4 w-4"></i>
+            <a href="tel:0415174668" class="hover:underline">0415 174 668</a>
+          </div>
+          <button id="header-book-btn" class="transition-all duration-300 bg-white text-green-500 hover:bg-gray-100 px-4 py-2 rounded-md font-medium">
+            Book Walkthrough
+          </button>
+        </div>
+        <div class="md:hidden w-1/3 flex justify-end">
+          <button id="header-book-mobile" class="transition-all duration-300 text-xs px-3 py-2 bg-white text-green-500 hover:bg-gray-100 rounded-md font-medium">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-emerald-50 to-green-100 py-20 mt-20">
+    <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('realityscapes-logo-jpeg (1).jpg');"></div>
+    <div class="container mx-auto px-4 relative">
+      <div class="max-w-4xl mx-auto text-center">
+        <div id="hero-badge" class="mb-6 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-orange-100 text-orange-800 transition-all duration-700 ease-out opacity-0 -translate-y-8">
+          <i data-lucide="clock" class="h-3 w-3 mr-1"></i>
+          Winter planting slots are limited – secure yours today
+        </div>
+        
+        <h1 id="hero-title" class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight transition-all duration-700 ease-out delay-200 opacity-0 -translate-x-12">
+          Transform your yard into the garden
+          <span class="text-emerald-600">Canberra notices</span>
+        </h1>
+        
+        <p id="hero-description" class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto transition-all duration-700 ease-out delay-400 opacity-0 translate-x-12">
+          From turf to hedges, we handle the dirty work—you enjoy the results.
+        </p>
+
+        <div id="hero-buttons" class="flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 ease-out delay-600 opacity-0 scale-95">
+          <button id="hero-book-btn" class="bg-emerald-600 hover:bg-emerald-700 text-white text-lg px-8 py-4 rounded-md font-medium transition-colors">
+            Book your walkthrough
+          </button>
+          <a href="tel:0415174668" class="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 text-lg px-8 py-4 rounded-md font-medium transition-colors inline-flex items-center justify-center">
+            <i data-lucide="phone" class="h-5 w-5 mr-2"></i>
+            Call now
+          </a>
+        </div>
+
+        <div id="hero-trust-points" class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto transition-all duration-700 ease-out delay-800 opacity-0 translate-y-12">
+          <div class="flex items-center justify-center space-x-2 text-xs md:text-sm text-gray-600 bg-white/90 backdrop-blur rounded-lg px-3 md:px-4 py-2 md:py-3 shadow-md border border-gray-200">
+            <i data-lucide="check-circle" class="h-4 w-4 text-emerald-600 flex-shrink-0"></i>
+            <span class="text-center">Fully insured</span>
+          </div>
+          <div class="flex items-center justify-center space-x-2 text-xs md:text-sm text-gray-600 bg-white/90 backdrop-blur rounded-lg px-3 md:px-4 py-2 md:py-3 shadow-md border border-gray-200">
+            <i data-lucide="check-circle" class="h-4 w-4 text-emerald-600 flex-shrink-0"></i>
+            <span class="text-center">12 month workmanship warranty & 6 month plant warranty</span>
+          </div>
+          <div class="flex items-center justify-center space-x-2 text-xs md:text-sm text-gray-600 bg-white/90 backdrop-blur rounded-lg px-3 md:px-4 py-2 md:py-3 shadow-md border border-gray-200">
+            <i data-lucide="check-circle" class="h-4 w-4 text-emerald-600 flex-shrink-0"></i>
+            <span class="text-center">Rated 5 stars on Google (0 reviews under 5)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div id="services-header" class="text-center mb-16 transition-all duration-700 ease-out opacity-0 -translate-y-8">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            Professional Softscaping Services
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Specializing in Canberra's unique climate with meticulous attention to detail
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service cards will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust & Credentials -->
+  <section class="py-20 bg-emerald-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 id="trust-header" class="text-3xl font-bold text-gray-900 mb-12 transition-all duration-700 ease-out opacity-0 -translate-y-8">
+          Why Canberra Trusts Realityscapes
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div id="trust-card-0" class="flex flex-col items-center space-y-4 transition-all duration-500 opacity-0 translate-y-12">
+            <div class="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center">
+              <i data-lucide="shield" class="h-8 w-8 text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Fully Insured</h3>
+            <p class="text-gray-600">Complete peace of mind with comprehensive insurance coverage</p>
+          </div>
+          
+          <div id="trust-card-1" class="flex flex-col items-center space-y-4 transition-all duration-500 opacity-0 translate-y-12">
+            <div class="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center">
+              <i data-lucide="award" class="h-8 w-8 text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Warranty Protected</h3>
+            <p class="text-gray-600">12 month workmanship & 6 month plant warranty</p>
+          </div>
+          
+          <div id="trust-card-2" class="flex flex-col items-center space-y-4 transition-all duration-500 opacity-0 translate-y-12">
+            <div class="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center">
+              <i data-lucide="star" class="h-8 w-8 text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">5-Star Rated</h3>
+            <p class="text-gray-600">Perfect Google rating with zero reviews under 5 stars</p>
+          </div>
+        </div>
+
+        <div id="trust-info" class="mt-12 p-4 md:p-6 bg-white rounded-lg shadow-md transition-all duration-700 ease-out delay-600 opacity-0 translate-x-12">
+          <p class="text-sm md:text-lg text-gray-700 mb-4">
+            <strong>Serving the Canberra region</strong> from our base in Kingston, ACT
+          </p>
+          <div class="flex flex-col md:flex-row justify-center md:space-x-8 space-y-2 md:space-y-0 text-xs md:text-sm text-gray-600 border-t border-gray-200 pt-4">
+            <span class="text-center">• No mess left behind</span>
+            <span class="text-center">• Transparent pricing</span>
+            <span class="text-center">• Local climate expertise</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-2xl mx-auto">
+        <div id="contact-header" class="text-center mb-12 transition-all duration-700 ease-out opacity-0 -translate-y-8">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            Ready to Transform Your Garden?
+          </h2>
+          <p class="text-xl text-gray-600">
+            Book your free on-site walkthrough today
+          </p>
+        </div>
+
+        <div id="form-success" class="hidden text-center py-12 bg-emerald-50 border-2 border-emerald-200 shadow-2xl rounded-lg">
+          <i data-lucide="check-circle" class="h-16 w-16 text-emerald-600 mx-auto mb-4"></i>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
+          <p class="text-gray-600">We'll be in touch within 1 business day.</p>
+        </div>
+
+        <div id="form-container" class="space-y-6">
+          <!-- Headline Section -->
+          <div id="contact-form-header" class="bg-gray-50 border-0 relative overflow-hidden transition-all duration-700 ease-out delay-300 opacity-0 -translate-x-12 rounded-lg">
+            <div class="absolute inset-0 bg-gradient-to-r from-green-500/20 via-transparent to-green-500/20 animate-pulse z-0"></div>
+            <div class="absolute inset-0 border-2 border-green-500/40 rounded-lg animate-pulse z-0"></div>
+            <div class="relative z-10 p-6">
+              <h3 class="text-2xl font-bold text-center mb-2">Free Walkthrough Request</h3>
+              <p class="text-center text-gray-600">Tell us about your project and we'll schedule your visit</p>
+            </div>
+          </div>
+
+          <!-- Form Fields -->
+          <div id="contact-form-fields" class="bg-white shadow-2xl border-2 border-gray-200 transition-all duration-700 ease-out delay-600 opacity-0 translate-x-12 rounded-lg">
+            <div class="p-6">
+              <form id="contact-form" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    />
+                  </div>
+                  <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      required
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    />
+                  </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    />
+                  </div>
+                  <div>
+                    <label for="suburb" class="block text-sm font-medium text-gray-700 mb-1">Suburb *</label>
+                    <input
+                      id="suburb"
+                      name="suburb"
+                      type="text"
+                      required
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service needed</label>
+                  <select
+                    id="service"
+                    name="service"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="overhaul">Overhaul / Rework / Design</option>
+                    <option value="turf">Turf installation</option>
+                    <option value="garden">Garden bed design</option>
+                    <option value="mulch">Mulchwork</option>
+                    <option value="hedges">Hedges & screening</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Tell us about your garden</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    placeholder="Describe your project, timeline, or any specific requirements..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" id="submit-btn" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white text-lg py-3 rounded-md font-medium transition-colors">
+                  <span id="submit-text">Request your walkthrough</span>
+                  <span id="submit-loading" class="hidden flex items-center justify-center">
+                    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending...
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 id="faq-header" class="text-3xl font-bold text-gray-900 text-center mb-12 transition-all duration-700 ease-out opacity-0 -translate-y-8">
+          Frequently Asked Questions
+        </h2>
+        
+        <div class="space-y-4">
+          <div id="faq-item-0" class="bg-white rounded-lg px-6 border border-gray-200 shadow-md transition-all duration-500 opacity-0 translate-y-8">
+            <button class="w-full text-left py-4 flex justify-between items-center font-semibold text-gray-900 hover:text-emerald-600" onclick="toggleFaq(0)">
+              <span>Do you remove all green waste?</span>
+              <i data-lucide="chevron-down" class="h-5 w-5 transform transition-transform" id="faq-icon-0"></i>
+            </button>
+            <div class="hidden pb-4 text-gray-600" id="faq-content-0">
+              <p>Yes—your garden is left spotless after every job.</p>
+            </div>
+          </div>
+          
+          <div id="faq-item-1" class="bg-white rounded-lg px-6 border border-gray-200 shadow-md transition-all duration-500 opacity-0 translate-y-8">
+            <button class="w-full text-left py-4 flex justify-between items-center font-semibold text-gray-900 hover:text-emerald-600" onclick="toggleFaq(1)">
+              <span>Can you recommend plants for Canberra's climate?</span>
+              <i data-lucide="chevron-down" class="h-5 w-5 transform transition-transform" id="faq-icon-1"></i>
+            </button>
+            <div class="hidden pb-4 text-gray-600" id="faq-content-1">
+              <p>Absolutely. We specialise in low-maintenance species suited to the local seasons.</p>
+            </div>
+          </div>
+          
+          <div id="faq-item-2" class="bg-white rounded-lg px-6 border border-gray-200 shadow-md transition-all duration-500 opacity-0 translate-y-8">
+            <button class="w-full text-left py-4 flex justify-between items-center font-semibold text-gray-900 hover:text-emerald-600" onclick="toggleFaq(2)">
+              <span>How fast can you start?</span>
+              <i data-lucide="chevron-down" class="h-5 w-5 transform transition-transform" id="faq-icon-2"></i>
+            </button>
+            <div class="hidden pb-4 text-gray-600" id="faq-content-2">
+              <p>Walkthroughs within days; scheduling depends on job size and weather.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div id="footer-content" class="max-w-4xl mx-auto transition-all duration-700 ease-out opacity-0 translate-y-12">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <img src="realityscapes-logo-jpeg (1).jpg" alt="Realityscapes CBR Logo" class="h-10 w-auto" />
+              <span class="text-xl font-bold">Realityscapes CBR</span>
+            </div>
+            <p class="text-gray-300 mb-4">
+              Professional softscaping services for the Canberra region. 
+              Friendly, meticulous, craftsmanlike approach to every project.
+            </p>
+          </div>
+          
+          <div>
+            <h3 class="font-semibold mb-4">Services</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>Garden Design & Overhaul</li>
+              <li>Turf Installation</li>  
+              <li>Garden Bed Planting</li>
+              <li>Mulchwork & Soil Prep</li>
+              <li>Hedge & Screening</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="font-semibold mb-4">Contact</h3>
+            <div class="space-y-3 text-gray-300">
+              <div class="flex items-center space-x-2">
+                <i data-lucide="phone" class="h-4 w-4"></i>
+                <a href="tel:0415174668" class="hover:text-white transition-colors">0415 174 668</a>
+              </div>
+              <div class="flex items-center space-x-2">
+                <i data-lucide="mail" class="h-4 w-4"></i>
+                <span>contact@realityscapes.com.au</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <i data-lucide="map-pin" class="h-4 w-4"></i>
+                <span>Kingston, ACT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-700 pt-8 text-center">
+          <p class="text-gray-400 mb-4">
+            © 2024 Realityscapes CBR. All rights reserved. | ABN: 66 481 745 785
+          </p>
+          <div class="flex justify-end">
+            <div class="flex space-x-4 text-xs text-gray-400">
+              <a href="https://realityscapes.netlify.app/warranty" class="hover:text-white transition-colors">
+                Our Warranty
+              </a>
+              <a href="https://realityscapes.netlify.app/terms-conditions" class="hover:text-white transition-colors">
+                T's and C's
+              </a>
+              <a href="https://realityscapes.netlify.app/privacy-policy" class="hover:text-white transition-colors">
+                Privacy Policy
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
