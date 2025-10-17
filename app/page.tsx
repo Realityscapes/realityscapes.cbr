@@ -10,7 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Phone, Mail, MapPin, Star, Shield, Award, Clock, Leaf } from 'lucide-react';
+import { CircleCheck as CheckCircle, Phone, Mail, MapPin, Star, Shield, Award, Clock, Leaf } from 'lucide-react';
 
 export default function Home() {
   const [formSubmitted, setFormSubmitted] = useState(false);
