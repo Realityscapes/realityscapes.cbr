@@ -457,7 +457,7 @@ export default function Home() {
                           />
                         </div>
                         <div>
-                          <Label htmlFor="suburb">Suburb *</Label>
+                          <Label htmlFor="suburb">Suburb</Label>
                           <Input
                             id="suburb"
                             required
