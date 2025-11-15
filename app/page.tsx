@@ -189,13 +189,7 @@ export default function Home() {
               }`}>Realityscapes CBR</span>
             </div>
             <div className="w-1/3"></div>
-            <div className="hidden md:flex items-center space-x-6">
-              <div className={`flex items-center space-x-2 text-sm transition-colors duration-300 ${
-                isScrolled ? 'text-gray-600' : 'text-white/90'
-              }`}>
-                <Phone className="h-4 w-4" />
-                <a href="tel:0415174668" className="hover:underline">0415 174 668</a>
-              </div>
+            <div className="hidden md:flex items-center space-x-4">
               <a 
                 href="/pricing" 
                 className={`text-sm transition-colors duration-300 hover:underline ${
@@ -212,6 +206,12 @@ export default function Home() {
               >
                 Contact
               </a>
+              <div className={`flex items-center space-x-2 text-sm transition-colors duration-300 ${
+                isScrolled ? 'text-gray-600' : 'text-white/90'
+              }`}>
+                <Phone className="h-4 w-4" />
+                <a href="tel:0415174668" className="hover:underline">0415 174 668</a>
+              </div>
               <Button className={`transition-all duration-300 ${
                 isScrolled 
                   ? 'bg-emerald-600 hover:bg-emerald-700' 
@@ -297,7 +297,7 @@ export default function Home() {
               {services.map((service, index) => {
                 const images = [
                   '/Screenshot 2025-08-23 084134.png',
-                  '/files_6614947-1755904577218-unrolling-sod.webp', 
+                  '/files_6614947-1755904577218-unrolling-sod.webp',
                   '/files_6614947-1755904677971-My-Raised-Bed-Garden-Design-Tips-1024x538.webp',
                   '/files_6614947-1755904569347-18101010259436359-m-90-600.jpg',
                   '/files_6614947-1755904559610-18059309800659720-m-90-600.jpg'
