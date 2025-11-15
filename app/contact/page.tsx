@@ -160,6 +160,14 @@ export default function ContactPage() {
             <div className="w-1/3"></div>
             <div className="hidden md:flex items-center space-x-4">
               <Link 
+                href="/" 
+                className={`text-sm transition-colors duration-300 hover:underline ${
+                  isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/90 hover:text-white'
+                }`}
+              >
+                Home
+              </Link>
+              <Link 
                 href="/pricing" 
                 className={`text-sm transition-colors duration-300 hover:underline ${
                   isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/90 hover:text-white'
