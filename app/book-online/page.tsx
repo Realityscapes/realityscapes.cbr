@@ -572,7 +572,7 @@ export default function BookOnlinePage() {
 
                 <div>
                   <Label htmlFor="email">
-                    Email Address <span className="text-red-500">*</span>
+                    Email Address
                   </Label>
                   <Input 
                     id="email"
@@ -581,7 +581,6 @@ export default function BookOnlinePage() {
                     placeholder="Your email address"
                     value={formData.email}
                     onChange={handleChange}
-                    required
                     className="mt-2"
                   />
                 </div>
