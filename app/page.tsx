@@ -196,6 +196,22 @@ export default function Home() {
                 <Phone className="h-4 w-4" />
                 <a href="tel:0415174668" className="hover:underline">0415 174 668</a>
               </div>
+              <a 
+                href="/pricing" 
+                className={`text-sm transition-colors duration-300 hover:underline ${
+                  isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/90 hover:text-white'
+                }`}
+              >
+                Pricing
+              </a>
+              <a 
+                href="/contact" 
+                className={`text-sm transition-colors duration-300 hover:underline ${
+                  isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/90 hover:text-white'
+                }`}
+              >
+                Contact
+              </a>
               <Button className={`transition-all duration-300 ${
                 isScrolled 
                   ? 'bg-emerald-600 hover:bg-emerald-700' 
