@@ -233,6 +233,17 @@ export default function Home() {
             </div>
             <div className="md:hidden w-1/3 flex justify-end items-center space-x-2">
               <Button 
+                size="sm" 
+                className={`transition-all duration-300 text-xs px-3 py-2 ${
+                  isScrolled 
+                    ? 'bg-emerald-600 hover:bg-emerald-700' 
+                    : 'bg-white text-green-500 hover:bg-gray-100'
+                }`} 
+                onClick={scrollToContact}
+              >
+                Book Now
+              </Button>
+              <Button 
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -244,56 +255,45 @@ export default function Home() {
               >
                 {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </Button>
-              <Button 
-                size="sm" 
-                className={`transition-all duration-300 text-xs px-3 py-2 ${
-                  isScrolled 
-                    ? 'bg-emerald-600 hover:bg-emerald-700' 
-                    : 'bg-white text-green-500 hover:bg-gray-100'
-                }`} 
-                onClick={scrollToContact}
-              >
-                Book Now
-              </Button>
             </div>
           </div>
           
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
-            <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40">
-              <div className="px-4 py-2 space-y-1">
+            <div className="md:hidden absolute top-full left-0 right-0 bg-green-500/20 backdrop-blur-md border-t border-green-300/30 shadow-2xl z-40">
+              <div className="px-4 py-3">
                 <Link 
                   href="/" 
-                  className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors"
+                  className="block px-4 py-3 text-gray-900 hover:bg-white/20 rounded-lg transition-all duration-300 font-medium border-b border-gray-300/20"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <a 
                   href="/pricing" 
-                  className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors"
+                  className="block px-4 py-3 text-gray-900 hover:bg-white/20 rounded-lg transition-all duration-300 font-medium border-b border-gray-300/20"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Pricing
                 </a>
                 <a 
                   href="/contact" 
-                  className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors"
+                  className="block px-4 py-3 text-gray-900 hover:bg-white/20 rounded-lg transition-all duration-300 font-medium border-b border-gray-300/20"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact
                 </a>
                 <a 
                   href="/book-online" 
-                  className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors"
+                  className="block px-4 py-3 text-gray-900 hover:bg-white/20 rounded-lg transition-all duration-300 font-medium border-b border-gray-300/20"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Book Online
                 </a>
-                <div className="px-3 py-2 border-t border-gray-200 mt-2">
-                  <div className="flex items-center space-x-2 text-sm text-gray-600">
+                <div className="px-4 py-3 mt-2">
+                  <div className="flex items-center space-x-2 text-sm text-gray-800 font-medium">
                     <Phone className="h-4 w-4" />
-                    <a href="tel:0415174668" className="hover:underline">0415 174 668</a>
+                    <a href="tel:0415174668" className="hover:text-emerald-600 transition-colors">0415 174 668</a>
                   </div>
                 </div>
               </div>
