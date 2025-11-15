@@ -302,11 +302,6 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('/realityscapes-logo-jpeg%20(1).jpg')] bg-cover bg-center opacity-30"></div>
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge id="hero-badge" className={`mb-6 bg-orange-100 text-orange-800 hover:bg-orange-200 transition-all duration-700 ease-out ${visibleSections.has('hero-badge') ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
-              <Clock className="h-3 w-3 mr-1" />
-              Winter planting slots are limited – secure yours today
-            </Badge>
-            
             <h1 id="hero-title" className={`text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight transition-all duration-700 ease-out delay-200 ${visibleSections.has('hero-title') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
               Transform your yard into the garden{' '}
               <span className="text-emerald-600">Canberra notices</span>
