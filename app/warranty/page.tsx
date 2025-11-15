@@ -152,12 +152,22 @@ export default function WarrantyPage() {
                 <Phone className="h-4 w-4" />
                 <a href="tel:0415174668" className="hover:underline">0415 174 668</a>
               </div>
-              <Button className={`transition-all duration-300 ${
-                isScrolled 
-                  ? 'bg-emerald-600 hover:bg-emerald-700' 
-                  : 'bg-white text-green-500 hover:bg-gray-100'
-              }`} asChild>
-                <Link href="/">Book Walkthrough</Link>
+              <Button 
+                className={`transition-all duration-300 ${
+                  isScrolled 
+                    ? 'bg-emerald-600 hover:bg-emerald-700' 
+                    : 'bg-white text-green-500 hover:bg-gray-100'
+                }`} 
+                onClick={() => {
+                  const contactSection = document.getElementById('contact-header');
+                  if (contactSection) {
+                    window.location.href = '/#contact-header';
+                  } else {
+                    window.location.href = '/';
+                  }
+                }}
+              >
+                Book Walkthrough
               </Button>
             </div>
             <div className="md:hidden w-1/3 flex justify-end">
@@ -210,11 +220,12 @@ export default function WarrantyPage() {
                 </Link>
                 <Button 
                   className="mx-4 mb-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium"
-                  asChild
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    window.location.href = '/';
+                  }}
                 >
-                  <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
-                    Book Now
-                  </Link>
+                  Book Now
                 </Button>
                 <div className="px-4 py-3 mt-2">
                   <div className="flex items-center space-x-2 text-sm text-gray-800 font-medium">
