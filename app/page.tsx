@@ -676,9 +676,9 @@ export default function Home() {
               </p>
               <div className="flex justify-end">
                 <div className="flex space-x-4 text-xs text-gray-400">
-                  <Link href="/warranty" className="hover:text-white transition-colors">
+                  <a href="https://realityscapes.netlify.app/warranty" className="hover:text-white transition-colors">
                     Our Warranty
-                  </Link>
+                  </a>
                   <a href="https://realityscapes.netlify.app/terms-conditions" className="hover:text-white transition-colors">
                     T's and C's
                   </a>

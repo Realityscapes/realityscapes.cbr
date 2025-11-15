@@ -572,7 +572,7 @@ export default function BookOnlinePage() {
 
                 <div>
                   <Label htmlFor="email">
-                    Email Address
+                    Email Address <span className="text-red-500">*</span>
                   </Label>
                   <Input 
                     id="email"
@@ -581,6 +581,7 @@ export default function BookOnlinePage() {
                     placeholder="Your email address"
                     value={formData.email}
                     onChange={handleChange}
+                    required
                     className="mt-2"
                   />
                 </div>
@@ -848,9 +849,9 @@ export default function BookOnlinePage() {
               </p>
               <div className="flex justify-end">
                 <div className="flex space-x-4 text-xs text-gray-400">
-                  <Link href="/warranty" className="hover:text-white transition-colors">
+                  <a href="https://realityscapes.netlify.app/warranty" className="hover:text-white transition-colors">
                     Our Warranty
-                  </Link>
+                  </a>
                   <a href="https://realityscapes.netlify.app/terms-conditions" className="hover:text-white transition-colors">
                     T's and C's
                   </a>
