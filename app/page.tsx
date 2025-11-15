@@ -297,7 +297,7 @@ export default function Home() {
               {services.map((service, index) => {
                 const images = [
                   '/Screenshot 2025-08-23 084134.png',
-                  '/files_6614947-1755904577218-unrolling-sod.webp',
+                  '/18059759999397527-m-90-600.jpg',
                   '/files_6614947-1755904677971-My-Raised-Bed-Garden-Design-Tips-1024x538.webp',
                   '/files_6614947-1755904569347-18101010259436359-m-90-600.jpg',
                   '/files_6614947-1755904559610-18059309800659720-m-90-600.jpg'
