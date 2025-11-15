@@ -212,18 +212,7 @@ export default function PricingPage() {
                 <Link href="/">Book Walkthrough</Link>
               </Button>
             </div>
-            <div className="md:hidden w-1/3 flex justify-end items-center space-x-2">
-              <Button 
-                size="sm" 
-                className={`transition-all duration-300 text-xs px-3 py-2 ${
-                  isScrolled 
-                    ? 'bg-emerald-600 hover:bg-emerald-700' 
-                    : 'bg-white text-green-500 hover:bg-gray-100'
-                }`} 
-                asChild
-              >
-                <Link href="/">Book Now</Link>
-              </Button>
+            <div className="md:hidden w-1/3 flex justify-end">
               <Button 
                 variant="ghost"
                 size="sm"
