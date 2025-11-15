@@ -492,22 +492,18 @@ export default function WarrantyPage() {
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <div className="grid grid-cols-3 gap-2 items-center w-full max-w-md md:flex md:gap-4 md:max-w-none md:justify-center">
                   <Button 
-                    asChild
                     className="bg-green-600 text-white hover:bg-green-700 text-xs text-center md:px-8 md:py-3 md:text-base"
+                    onClick={() => window.location.href = '/book-online'}
                   >
-                    <Link href="/book-online">
-                      Book Service
-                    </Link>
+                    Book Service
                   </Button>
                   <span className="text-white font-medium text-xs text-center md:text-base">or</span>
                   <Button 
-                    asChild
                     variant="secondary"
                     className="bg-white text-green-500 hover:bg-gray-100 text-xs text-center leading-tight md:px-8 md:py-3 md:text-base"
+                    onClick={() => window.location.href = '/'}
                   >
-                    <Link href="/">
-                      Get Your Free Quote
-                    </Link>
+                    Get Your Free Quote
                   </Button>
                 </div>
               </div>
