@@ -638,9 +638,9 @@ export default function ContactPage() {
               </p>
               <div className="flex justify-end">
                 <div className="flex space-x-4 text-xs text-gray-400">
-                  <a href="https://realityscapes.netlify.app/warranty" className="hover:text-white transition-colors">
+                  <Link href="/warranty" className="hover:text-white transition-colors">
                     Our Warranty
-                  </a>
+                  </Link>
                   <a href="https://realityscapes.netlify.app/terms-conditions" className="hover:text-white transition-colors">
                     T's and C's
                   </a>
