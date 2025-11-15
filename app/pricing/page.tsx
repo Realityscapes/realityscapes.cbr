@@ -12,6 +12,7 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function PricingPage() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -211,7 +212,19 @@ export default function PricingPage() {
                 <Link href="/">Book Walkthrough</Link>
               </Button>
             </div>
-            <div className="md:hidden w-1/3 flex justify-end">
+            <div className="md:hidden w-1/3 flex justify-end items-center space-x-2">
+              <Button 
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className={`p-2 transition-all duration-300 ${
+                  isScrolled 
+                    ? 'text-gray-900 hover:bg-gray-100' 
+                    : 'text-white hover:bg-white/10'
+                }`}
+              >
+                {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              </Button>
               <Button 
                 size="sm" 
                 className={`transition-all duration-300 text-xs px-3 py-2 ${
@@ -225,6 +238,48 @@ export default function PricingPage() {
               </Button>
             </div>
           </div>
+          
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40">
+              <div className="px-4 py-2 space-y-1">
+                <Link 
+                  href="/" 
+                  className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Home
+                </Link>
+                <Link 
+                  href="/pricing" 
+                  className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Pricing
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+                <Link 
+                  href="/book-online" 
+                  className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Book Online
+                </Link>
+                <div className="px-3 py-2 border-t border-gray-200 mt-2">
+                  <div className="flex items-center space-x-2 text-sm text-gray-600">
+                    <Phone className="h-4 w-4" />
+                    <a href="tel:0415174668" className="hover:underline">0415 174 668</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </header>
 
