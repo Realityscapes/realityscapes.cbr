@@ -10,6 +10,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Phone, Mail, MapPin, Calendar as CalendarIcon, Menu, X } from 'lucide-react';
+import Calendar from '@/components/Calendar';
 
 export default function BookOnlinePage() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -341,6 +342,31 @@ export default function BookOnlinePage() {
     return availableSlots;
   };
 
+  // Calendar functions
+  const handleDateSelect = (date: Date) => {
+    const monthNames = [
+      'january', 'february', 'march', 'april', 'may', 'june',
+      'july', 'august', 'september', 'october', 'november', 'december'
+    ];
+    
+    setFormData(prev => ({
+      ...prev,
+      month: monthNames[date.getMonth()],
+      date: date.getDate().toString(),
+      time: '' // Reset time when date changes
+    }));
+    setSelectedPeriod(''); // Reset period selection
+    setShowCalendar(false); // Close calendar after selection
+  };
+
+  const hasAvailableSlots = (day: number) => {
+    // For now, assume all weekdays have available slots
+    // In a real app, this would check against backend availability
+    const date = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+    const dayOfWeek = date.getDay();
+    return dayOfWeek !== 0 && dayOfWeek !== 6; // Not weekend
+  };
+
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Header */}
@@ -610,6 +636,33 @@ export default function BookOnlinePage() {
                     </CardContent>
                   </Card>
                 </div>
+
+                {/* Calendar Modal */}
+                {showCalendar && (
+                  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                    <div className="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
+                      <div className="p-4 border-b flex justify-between items-center">
+                        <h3 className="text-lg font-semibold text-gray-900">Select a Date</h3>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => setShowCalendar(false)}
+                          className="p-1"
+                        >
+                          <X className="h-4 w-4" />
+                        </Button>
+                      </div>
+                      <div className="p-4">
+                        <Calendar
+                          onDateSelect={handleDateSelect}
+                          currentDate={currentDate}
+                          setCurrentDate={setCurrentDate}
+                          hasAvailableSlots={hasAvailableSlots}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 <div>
                   <Label htmlFor="month">
