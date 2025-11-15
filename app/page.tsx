@@ -269,6 +269,12 @@ export default function Home() {
                 >
                   Home
                 </Link>
+                <Button 
+                  className="mx-4 mb-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium"
+                  onClick={scrollToContact}
+                >
+                  Book Now
+                </Button>
                 <a 
                   href="/pricing" 
                   className="block px-4 py-3 text-gray-900 hover:bg-white/20 rounded-lg transition-all duration-300 font-medium border-b border-gray-300/20"

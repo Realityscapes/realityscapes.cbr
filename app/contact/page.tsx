@@ -257,6 +257,14 @@ export default function ContactPage() {
                 >
                   Book Online
                 </Link>
+                <Button 
+                  className="mx-4 mb-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium"
+                  asChild
+                >
+                  <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+                    Book Now
+                  </Link>
+                </Button>
                 <div className="px-4 py-3 mt-2">
                   <div className="flex items-center space-x-2 text-sm text-gray-800 font-medium">
                     <Phone className="h-4 w-4" />
