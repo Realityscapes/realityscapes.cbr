@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import emailjs from '@emailjs/browser';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,9 +12,20 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 
 export default function ContactPage() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const heroRef = useRef<HTMLDivElement>(null);
@@ -124,10 +136,79 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white overflow-x-hidden">
+      {/* Header */}
+      <header className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-green-500/20 backdrop-blur-md shadow-lg py-2' 
+          : 'bg-green-500 shadow-sm py-4'
+      }`}>
+        <div className="container mx-auto px-4 max-w-full">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2 w-1/3">
+              <img 
+                src="/realityscapes-logo-jpeg (1).jpg" 
+                alt="Realityscapes CBR Logo" 
+                className={`w-auto transition-all duration-300 ${
+                  isScrolled ? 'h-8 md:h-10' : 'h-12 md:h-16'
+                }`} 
+              />
+              <span className={`text-sm md:text-2xl font-bold transition-colors duration-300 ${
+                isScrolled ? 'text-gray-900' : 'text-white'
+              }`}>Realityscapes CBR</span>
+            </div>
+            <div className="w-1/3"></div>
+            <div className="hidden md:flex items-center space-x-4">
+              <Link 
+                href="/pricing" 
+                className={`text-sm transition-colors duration-300 hover:underline ${
+                  isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/90 hover:text-white'
+                }`}
+              >
+                Pricing
+              </Link>
+              <Link 
+                href="/contact" 
+                className={`text-sm transition-colors duration-300 hover:underline ${
+                  isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/90 hover:text-white'
+                }`}
+              >
+                Contact
+              </Link>
+              <div className={`flex items-center space-x-2 text-sm transition-colors duration-300 ${
+                isScrolled ? 'text-gray-600' : 'text-white/90'
+              }`}>
+                <Phone className="h-4 w-4" />
+                <a href="tel:0415174668" className="hover:underline">0415 174 668</a>
+              </div>
+              <Button className={`transition-all duration-300 ${
+                isScrolled 
+                  ? 'bg-emerald-600 hover:bg-emerald-700' 
+                  : 'bg-white text-green-500 hover:bg-gray-100'
+              }`} asChild>
+                <Link href="/">Book Walkthrough</Link>
+              </Button>
+            </div>
+            <div className="md:hidden w-1/3 flex justify-end">
+              <Button 
+                size="sm" 
+                className={`transition-all duration-300 text-xs px-3 py-2 ${
+                  isScrolled 
+                    ? 'bg-emerald-600 hover:bg-emerald-700' 
+                    : 'bg-white text-green-500 hover:bg-gray-100'
+                }`} 
+                asChild
+              >
+                <Link href="/">Book Now</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </header>
+
       {/* Hero Section */}
       <section 
-        className="relative h-96 bg-cover bg-center flex items-center justify-center"
+        className="relative h-96 bg-cover bg-center flex items-center justify-center mt-20"
         style={{
           backgroundImage: "url('https://lh3.googleusercontent.com/d/1DseY5vvdH6ovm9p3xvr5wA6Y6Fc46vvd')"
         }}
@@ -436,6 +517,74 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-16" style={{backgroundColor: '#1F2937'}}>
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              <div>
+                <div className="flex items-center space-x-2 mb-4">
+                  <img src="/realityscapes-logo-jpeg (1).jpg" alt="Realityscapes CBR Logo" className="h-10 w-auto" />
+                  <span className="text-xl font-bold">Realityscapes CBR</span>
+                </div>
+                <p className="text-gray-300 mb-4">
+                  Professional softscaping services for the Canberra region. 
+                  Friendly, meticulous, craftsmanlike approach to every project.
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="font-semibold mb-4">Services</h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li>Garden Design & Overhaul</li>
+                  <li>Turf Installation</li>  
+                  <li>Garden Bed Planting</li>
+                  <li>Mulchwork & Soil Prep</li>
+                  <li>Hedge & Screening</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="font-semibold mb-4">Contact</h3>
+                <div className="space-y-3 text-gray-300">
+                  <div className="flex items-center space-x-2">
+                    <Phone className="h-4 w-4" />
+                    <a href="tel:0415174668" className="hover:text-white transition-colors">0415 174 668</a>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Mail className="h-4 w-4" />
+                    <span>contact@realityscapes.com.au</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <MapPin className="h-4 w-4" />
+                    <span>Kingston, ACT</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border-t border-gray-700 pt-8 text-center">
+              <p className="text-gray-400 mb-4">
+                © 2024 Realityscapes CBR. All rights reserved. | ABN: 66 481 745 785
+              </p>
+              <div className="flex justify-end">
+                <div className="flex space-x-4 text-xs text-gray-400">
+                  <a href="https://realityscapes.netlify.app/warranty" className="hover:text-white transition-colors">
+                    Our Warranty
+                  </a>
+                  <a href="https://realityscapes.netlify.app/terms-conditions" className="hover:text-white transition-colors">
+                    T's and C's
+                  </a>
+                  <a href="https://realityscapes.netlify.app/privacy-policy" className="hover:text-white transition-colors">
+                    Privacy Policy
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
