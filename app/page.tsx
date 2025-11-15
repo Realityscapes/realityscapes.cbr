@@ -217,6 +217,14 @@ export default function Home() {
               >
                 Contact
               </a>
+              <a 
+                href="/book-online" 
+                className={`text-sm transition-colors duration-300 hover:underline ${
+                  isScrolled ? 'text-gray-600 hover:text-gray-900' : 'text-white/90 hover:text-white'
+                }`}
+              >
+                Book Online
+              </a>
               <div className={`flex items-center space-x-2 text-sm transition-colors duration-300 ${
                 isScrolled ? 'text-gray-600' : 'text-white/90'
               }`}>
