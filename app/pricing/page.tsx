@@ -351,9 +351,6 @@ export default function PricingPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-2xl font-bold text-gray-800 mb-2">$80 Per hour plus GST</p>
-                <Link href="/" className="text-green-500 underline hover:text-green-600">
-                  Gardening Home page
-                </Link>
               </CardContent>
             </Card>
             
