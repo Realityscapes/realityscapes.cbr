@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Shield, CheckCircle, Clock, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
+import { Shield, CircleCheck as CheckCircle, Clock, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 
 export default function WarrantyPage() {
   const [isScrolled, setIsScrolled] = useState(false);
