@@ -503,7 +503,7 @@ export default function Home() {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
-                          <Label htmlFor="name">Name *</Label>
+                          <Label htmlFor="name">Name <span className="text-red-500">*</span></Label>
                           <Input
                             id="name"
                             required
@@ -513,7 +513,7 @@ export default function Home() {
                           />
                         </div>
                         <div>
-                          <Label htmlFor="phone">Phone *</Label>
+                          <Label htmlFor="phone">Phone <span className="text-red-500">*</span></Label>
                           <Input
                             id="phone"
                             type="tel"
@@ -540,7 +540,6 @@ export default function Home() {
                           <Label htmlFor="suburb">Suburb</Label>
                           <Input
                             id="suburb"
-                            required
                             value={formData.suburb}
                             onChange={(e) => handleInputChange('suburb', e.target.value)}
                             className="mt-1"
@@ -565,10 +564,11 @@ export default function Home() {
                       </div>
 
                       <div>
-                        <Label htmlFor="message">Tell us about your garden</Label>
+                        <Label htmlFor="message">Tell us about your garden <span className="text-red-500">*</span></Label>
                         <Textarea
                           id="message"
                           rows={4}
+                          required
                           value={formData.message}
                           onChange={(e) => handleInputChange('message', e.target.value)}
                           className="mt-1"
