@@ -316,9 +316,20 @@ export default function Home() {
               <span className="text-emerald-600">Canberra notices</span>
             </h1>
             
-            <p id="hero-description" className={`text-xl text-gray-600 mb-8 max-w-2xl mx-auto transition-all duration-700 ease-out delay-400 ${visibleSections.has('hero-description') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+            <p id="hero-description" className={`text-xl text-gray-600 mb-6 max-w-2xl mx-auto transition-all duration-700 ease-out delay-400 ${visibleSections.has('hero-description') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
               From turf to hedges, we handle the dirty work—you enjoy the results.
             </p>
+
+            <div className="flex items-center justify-center gap-1 mb-8">
+              <div className="flex items-center gap-1 bg-white/90 backdrop-blur px-4 py-2 rounded-full shadow-lg border border-emerald-200">
+                <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                <span className="ml-2 text-sm font-semibold text-gray-800">5.0 on Google</span>
+              </div>
+            </div>
 
             <div id="hero-buttons" className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-700 ease-out delay-600 ${visibleSections.has('hero-buttons') ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
               <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-lg px-8 py-4" onClick={scrollToContact}>
