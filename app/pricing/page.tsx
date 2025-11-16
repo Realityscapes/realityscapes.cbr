@@ -492,12 +492,11 @@ export default function PricingPage() {
                 </div>
                 <div>
                   <Label htmlFor="email" className="text-gray-700 font-semibold">
-                    Email <span className="text-red-500">*</span>
+                    Email
                   </Label>
-                  <Input 
+                  <Input
                     id="email"
-                    type="email" 
-                    required
+                    type="email"
                     className="mt-2"
                   />
                 </div>

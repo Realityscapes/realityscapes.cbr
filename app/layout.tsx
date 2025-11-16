@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   title: 'Realityscapes CBR - Professional Softscaping & Garden Design Canberra',
   description: 'Transform your yard with professional softscaping services in Canberra. Turf installation, garden design, mulchwork & hedge planting. Fully insured with 5-star reviews. Book your free walkthrough today.',
   keywords: 'softscaping Canberra, garden makeover Canberra, turf installation Canberra, mulching Canberra, hedge planting Canberra, garden design Canberra',
+  icons: {
+    icon: '/realityscapes-logo-jpeg (1).jpg',
+    apple: '/realityscapes-logo-jpeg (1).jpg',
+  },
 };
 
 export default function RootLayout({

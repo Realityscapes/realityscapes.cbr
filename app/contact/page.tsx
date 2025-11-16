@@ -369,16 +369,15 @@ export default function ContactPage() {
 
                 <div>
                   <Label htmlFor="email">
-                    Email <span className="text-red-500">*</span>
+                    Email
                   </Label>
-                  <Input 
+                  <Input
                     id="email"
                     name="email"
                     type="email"
                     placeholder="Your email address"
                     value={formData.email}
                     onChange={handleChange}
-                    required
                     className="mt-2"
                   />
                 </div>

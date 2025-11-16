@@ -573,16 +573,15 @@ export default function BookOnlinePage() {
 
                 <div>
                   <Label htmlFor="email">
-                    Email Address <span className="text-red-500">*</span>
+                    Email Address
                   </Label>
-                  <Input 
+                  <Input
                     id="email"
                     name="email"
                     type="email"
                     placeholder="Your email address"
                     value={formData.email}
                     onChange={handleChange}
-                    required
                     className="mt-2"
                   />
                 </div>
