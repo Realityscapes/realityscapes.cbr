@@ -56,18 +56,18 @@ export default function Footer() {
                 © 2024 Realityscapes CBR. All rights reserved. | ABN: 66 481 745 785
               </p>
               <div className="flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-2 text-sm">
-                <Link href="/warranty" className="text-gray-400 hover:text-white transition-colors">
+                <a href="/warranty" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
                   Warranty
-                </Link>
-                <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
+                </a>
+                <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
                   Privacy Policy
-                </Link>
-                <Link href="/customer-policy" className="text-gray-400 hover:text-white transition-colors">
+                </a>
+                <a href="/customer-policy" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
                   Customer Policy
-                </Link>
-                <Link href="/terms-and-conditions" className="text-gray-400 hover:text-white transition-colors">
+                </a>
+                <a href="/terms-and-conditions" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
                   Terms & Conditions
-                </Link>
+                </a>
               </div>
             </div>
           </div>
