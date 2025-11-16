@@ -847,19 +847,6 @@ export default function BookOnlinePage() {
               <p className="text-gray-400 mb-4">
                 © 2024 Realityscapes CBR. All rights reserved. | ABN: 66 481 745 785
               </p>
-              <div className="flex justify-end">
-                <div className="flex space-x-4 text-xs text-gray-400">
-                  <a href="https://realityscapes.netlify.app/warranty" className="hover:text-white transition-colors">
-                    Our Warranty
-                  </a>
-                  <a href="https://realityscapes.netlify.app/terms-conditions" className="hover:text-white transition-colors">
-                    T's and C's
-                  </a>
-                  <a href="https://realityscapes.netlify.app/privacy-policy" className="hover:text-white transition-colors">
-                    Privacy Policy
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
