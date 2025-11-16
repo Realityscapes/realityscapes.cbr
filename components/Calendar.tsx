@@ -123,6 +123,7 @@ const Calendar: React.FC<CalendarProps> = ({ onDateSelect, currentDate, setCurre
     <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg">
       <div className="flex items-center justify-between mb-6">
         <button
+          type="button"
           onClick={() => navigateMonth('prev')}
           className="p-1.5 md:p-2 hover:bg-gray-100 rounded-lg transition-colors"
           disabled={currentDate.getMonth() === new Date().getMonth() && currentDate.getFullYear() === new Date().getFullYear()}
@@ -137,6 +138,7 @@ const Calendar: React.FC<CalendarProps> = ({ onDateSelect, currentDate, setCurre
         </h3>
         
         <button
+          type="button"
           onClick={() => navigateMonth('next')}
           className="p-1.5 md:p-2 hover:bg-gray-100 rounded-lg transition-colors"
         >

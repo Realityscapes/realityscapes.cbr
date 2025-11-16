@@ -112,9 +112,15 @@ export default function BookOnlinePage() {
     }
     
     // Validate required fields
-    if (!formData.name || !formData.email || !formData.month || 
-        !formData.date || !formData.time || !formData.service || !formData.phone) {
-      alert('Please fill in all required fields.');
+    const missingFields = [];
+    if (!formData.name) missingFields.push('Name');
+    if (!formData.phone) missingFields.push('Phone number');
+    if (!formData.month) missingFields.push('Month');
+    if (!formData.date) missingFields.push('Date');
+    if (!formData.time) missingFields.push('Time');
+
+    if (missingFields.length > 0) {
+      alert(`Please fill in the following required fields: ${missingFields.join(', ')}`);
       return;
     }
     
@@ -604,7 +610,7 @@ export default function BookOnlinePage() {
 
                 <div>
                   <Label htmlFor="service">
-                    Service <span className="text-red-500">*</span>
+                    Service
                   </Label>
                   <Select value={formData.service} onValueChange={(value) => handleSelectChange('service', value)}>
                     <SelectTrigger className="mt-2">
