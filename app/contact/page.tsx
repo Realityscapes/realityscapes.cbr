@@ -331,7 +331,8 @@ export default function ContactPage() {
               <Clock className="w-8 h-8 md:w-12 md:h-12 mx-auto mb-2 md:mb-4 text-green-500" />
               <h3 className="text-sm md:text-xl font-bold text-gray-800 mb-1 md:mb-2">Business Hours</h3>
               <p className="text-xs md:text-base text-gray-600">Mon - Fri: 7AM - 6PM</p>
-              <p className="text-xs md:text-base text-gray-600">Sat - Sun: 8AM - 5PM</p>
+              <p className="text-xs md:text-base text-gray-600">Sat: 8AM - 5PM</p>
+              <p className="text-xs md:text-base text-gray-600">Sun: Closed</p>
             </CardContent>
           </Card>
         </div>
